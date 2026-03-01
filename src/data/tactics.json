@@ -1,0 +1,142 @@
+{
+  "Pearl": {
+    "tiers": {
+      "S": [
+        { "agentName": "Viper", "reason": "Essential for controlling the large B site and cutting off long sightlines with her wall." },
+        { "agentName": "Astra", "reason": "Her global presence and gravity well are perfect for the complex mid layout and narrow corridors." }
+      ],
+      "A": [
+        { "agentName": "Jett", "reason": "Excellent for taking vertical positions in Mid and B site." },
+        { "agentName": "Fade", "reason": "Her prowlers are great for clearing the many corners in Mid and A site." },
+        { "agentName": "Killjoy", "reason": "Strong defensive holds on A site and flank watching." }
+      ],
+      "B": [
+        { "agentName": "Raze", "reason": "Good for clearing small rooms, but lacks the global control needed for Pearl's scale." },
+        { "agentName": "Sova", "reason": "Useful for info, but Fade's utility is often more effective in Pearl's tight corridors." }
+      ]
+    },
+    "tactics": {
+      "Attack": {
+        "summary": "Focus on B Long control or Mid pressure to split the defenders. Pearl favors slow, methodical takes.",
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+          { "x": 20, "y": 45, "label": "B Long", "description": "Crucial area to control for B site takes. Use smokes to cross." },
+          { "x": 50, "y": 50, "label": "Mid Plaza", "description": "The heart of the map. Control this to rotate quickly." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 90 }, { "x": 20, "y": 80 }, { "x": 20, "y": 45 }], "label": "B Main Push" },
+          { "points": [{ "x": 50, "y": 90 }, { "x": 80, "y": 80 }, { "x": 80, "y": 50 }], "label": "A Main Push" }
+        ],
+        "utility": [
+          { "x": 15, "y": 40, "type": "Smoke", "agent": "Viper", "description": "Wall across B Site to block Heaven and Connector." },
+          { "x": 85, "y": 45, "type": "Flash", "agent": "Phoenix", "description": "Flash out of A Main to clear site corners." }
+        ],
+        "tips": [
+          "Always watch the flank from Mid when pushing sites.",
+          "B site is very long-range; consider Snipers or Guardian.",
+          "Use utility to clear 'Art' area in Mid before pushing A."
+        ]
+      },
+      "Defence": {
+        "summary": "Hold B Long with a sniper and use utility to stall Mid. A site is easier to retake than B.",
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+          { "x": 20, "y": 30, "label": "B Heaven", "description": "Power position for snipers holding B Long." },
+          { "x": 80, "y": 40, "label": "A Flowers", "description": "Good defensive spot for holding A Main." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 10 }, { "x": 30, "y": 20 }], "label": "B Rotate" },
+          { "points": [{ "x": 50, "y": 10 }, { "x": 70, "y": 20 }], "label": "A Rotate" }
+        ],
+        "utility": [
+          { "x": 50, "y": 40, "type": "Trap", "agent": "Killjoy", "description": "Alarmbot in Mid to catch late lurkers." },
+          { "x": 25, "y": 50, "type": "Slow", "agent": "Sage", "description": "Orb on B Long to stall the execute." }
+        ],
+        "tips": [
+          "Don't give up Mid control for free; it's too vital.",
+          "Retaking B is very hard if the spike is planted for B Long.",
+          "Communicate Art and Mid Link rotations early."
+        ]
+      }
+    }
+  },
+  "Breeze": {
+    "tiers": {
+      "S": [
+        { "agentName": "Viper", "reason": "Absolutely essential for cutting off long sightlines on this massive map." },
+        { "agentName": "Jett", "reason": "Operator usage is key on Breeze, and Jett is the best for it." }
+      ],
+      "A": [
+        { "agentName": "Sova", "reason": "Long range recon is very powerful." },
+        { "agentName": "Chamber", "reason": "Great for holding long angles with his Headhunter and Op." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Use Viper wall to slice sites. Control Mid for rotations.", "tips": ["Take Mid control.", "Watch out for Operator angles."] },
+      "Defence": { "summary": "Hold long angles. Use Viper wall to deny info.", "tips": ["Play for retake if they rush.", "Use Operator on A or B main."] }
+    }
+  },
+  "Corrode": {
+    "tiers": {
+      "S": [
+        { "agentName": "Viper", "reason": "Toxic screen is vital for the open areas." },
+        { "agentName": "Omen", "reason": "Flexible smokes for the verticality of the map." }
+      ],
+      "A": [
+        { "agentName": "Raze", "reason": "Great for clearing the tight corners in the castle area." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Control the high ground. Use utility to clear corners.", "tips": ["Watch out for the salt flats.", "Use verticality to your advantage."] },
+      "Defence": { "summary": "Hold the high ground. Don't get flanked.", "tips": ["Use shotguns in tight spaces.", "Retake as a team."] }
+    }
+  },
+  "Split": {
+    "tiers": {
+      "S": [
+        { "agentName": "Raze", "reason": "Grenades and Satchels are perfect for the tight chokes." },
+        { "agentName": "Sage", "reason": "Wall is great for Mid control." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Mid control is essential to split the defenders.", "tips": ["Don't rush main without utility.", "Take Mid control."] },
+      "Defence": { "summary": "Hold Mid. Stall pushes with utility.", "tips": ["Don't over-rotate.", "Use utility to delay."] }
+    }
+  },
+  "Abyss": {
+    "tiers": {
+      "S": [
+        { "agentName": "Omen", "reason": "Great for one-ways and flexible smokes." },
+        { "agentName": "Jett", "reason": "Verticality and Operator usage." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Watch your step! Use utility to clear angles.", "tips": ["Don't fall off the map!", "Control the bridge."] },
+      "Defence": { "summary": "Hold angles. Push for info.", "tips": ["Use verticality.", "Don't get flanked."] }
+    }
+  },
+  "Bind": {
+    "tiers": {
+      "S": [
+        { "agentName": "Brimstone", "reason": "Smokes and molly are great for execution." },
+        { "agentName": "Raze", "reason": "Grenades for Hookah and Lamps." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Use teleporters to rotate quickly.", "tips": ["Clear Hookah.", "Watch for flanks."] },
+      "Defence": { "summary": "Hold Hookah and Showers.", "tips": ["Use teleporters for quick rotates.", "Retake together."] }
+    }
+  },
+  "Haven": {
+    "tiers": {
+      "S": [
+        { "agentName": "Breach", "reason": "Stuns and flashes are great for the three sites." },
+        { "agentName": "Jett", "reason": "Operator mobility is key." }
+      ]
+    },
+    "tactics": {
+      "Attack": { "summary": "Probing attacks. Rotate to weak site.", "tips": ["Control Garage.", "Watch for flanks."] },
+      "Defence": { "summary": "Don't over-rotate. Anchor sites.", "tips": ["Retake with team.", "Hold Garage."] }
+    }
+  }
+}
