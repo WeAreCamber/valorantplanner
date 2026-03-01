@@ -21,7 +21,7 @@ export const AgentSelector: React.FC = () => {
     return agentsData.find(a => a.displayName === name);
   };
 
-  const tiers = ['S', 'A', 'B'];
+  const tiers = ['S', 'A', 'B', 'C'];
 
   const container = {
     hidden: { opacity: 0 },
@@ -65,6 +65,7 @@ export const AgentSelector: React.FC = () => {
                     "w-12 h-12 flex items-center justify-center rounded text-2xl font-bold border-2",
                     tier === 'S' ? "bg-yellow-500/20 border-yellow-500 text-yellow-500" :
                     tier === 'A' ? "bg-red-500/20 border-red-500 text-red-500" :
+                    tier === 'B' ? "bg-blue-500/20 border-blue-500 text-blue-400" :
                     "bg-slate-500/20 border-slate-500 text-slate-400"
                   )}>
                     {tier}

@@ -42,8 +42,9 @@ export interface TacticUtility {
 
 export interface MapTactics {
   summary: string;
-  spawnPosition: TacticPosition;
+  spawnPosition: TacticPosition | null;
   keyPositions: TacticPosition[];
+  chokePoints?: TacticPosition[];
   paths: TacticPath[];
   utility: TacticUtility[];
   tips: string[];

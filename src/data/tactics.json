@@ -12,7 +12,12 @@
       ],
       "B": [
         { "agentName": "Raze", "reason": "Good for clearing small rooms, but lacks the global control needed for Pearl's scale." },
-        { "agentName": "Sova", "reason": "Useful for info, but Fade's utility is often more effective in Pearl's tight corridors." }
+        { "agentName": "Sova", "reason": "Useful for info, but Fade's utility is often more effective in Pearl's tight corridors." },
+        { "agentName": "KAY/O", "reason": "Decent for suppression, but flashes can be hard to use effectively in open B site." }
+      ],
+      "C": [
+        { "agentName": "Brimstone", "reason": "Smokes lack the range and duration needed for Pearl's size." },
+        { "agentName": "Breach", "reason": "Effective in some spots, but struggles with the long sightlines on B." }
       ]
     },
     "tactics": {
@@ -22,6 +27,11 @@
         "keyPositions": [
           { "x": 20, "y": 45, "label": "B Long", "description": "Crucial area to control for B site takes. Use smokes to cross." },
           { "x": 50, "y": 50, "label": "Mid Plaza", "description": "The heart of the map. Control this to rotate quickly." }
+        ],
+        "chokePoints": [
+           { "x": 20, "y": 50, "label": "B Main", "description": "Primary choke for B site." },
+           { "x": 80, "y": 50, "label": "A Main", "description": "Primary choke for A site." },
+           { "x": 50, "y": 45, "label": "Art/Mid Doors", "description": "Critical mid rotation choke." }
         ],
         "paths": [
           { "points": [{ "x": 50, "y": 90 }, { "x": 20, "y": 80 }, { "x": 20, "y": 45 }], "label": "B Main Push" },
@@ -44,6 +54,10 @@
           { "x": 20, "y": 30, "label": "B Heaven", "description": "Power position for snipers holding B Long." },
           { "x": 80, "y": 40, "label": "A Flowers", "description": "Good defensive spot for holding A Main." }
         ],
+        "chokePoints": [
+           { "x": 20, "y": 50, "label": "B Main", "description": "Primary choke for B site." },
+           { "x": 80, "y": 50, "label": "A Main", "description": "Primary choke for A site." }
+        ],
         "paths": [
           { "points": [{ "x": 50, "y": 10 }, { "x": 30, "y": 20 }], "label": "B Rotate" },
           { "points": [{ "x": 50, "y": 10 }, { "x": 70, "y": 20 }], "label": "A Rotate" }
@@ -63,59 +77,131 @@
   "Breeze": {
     "tiers": {
       "S": [
-        { "agentName": "Viper", "reason": "Absolutely essential for cutting off long sightlines on this massive map." },
-        { "agentName": "Jett", "reason": "Operator usage is key on Breeze, and Jett is the best for it." }
+        { "agentName": "Viper", "reason": "Her wall is the only reliable way to cut off Breeze's massive sightlines." },
+        { "agentName": "Jett", "reason": "Operator crutch on a map defined by long-range duels." },
+        { "agentName": "Sova", "reason": "High value recon darts and drone for clearing large sites." }
       ],
       "A": [
-        { "agentName": "Sova", "reason": "Long range recon is very powerful." },
-        { "agentName": "Chamber", "reason": "Great for holding long angles with his Headhunter and Op." }
+        { "agentName": "Chamber", "reason": "Excellent for holding long angles and economy management." },
+        { "agentName": "KAY/O", "reason": "Suppression blade is powerful for stopping rushes and disabling Viper walls." },
+        { "agentName": "Cypher", "reason": "Strong lurking presence and flank watch." }
+      ],
+      "B": [
+        { "agentName": "Yoru", "reason": "Can rotate quickly and deceive on the large map, but requires high skill." },
+        { "agentName": "Skye", "reason": "Flashes are good, but dog range is limited on such a large map." },
+        { "agentName": "Harbor", "reason": "Good secondary controller, but Viper is usually preferred." }
+      ],
+      "C": [
+        { "agentName": "Brimstone", "reason": "Smokes are too small and short-range for Breeze's scale." },
+        { "agentName": "Raze", "reason": "Satchels are less effective in open areas; grenades are easily dodged." }
       ]
     },
     "tactics": {
       "Attack": { 
-        "summary": "Use Viper wall to slice sites. Control Mid for rotations.", 
-        "tips": ["Take Mid control.", "Watch out for Operator angles."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "summary": "Use Viper wall to slice sites. Control Mid for rotations.",
+        "spawnPosition": { "x": 50, "y": 85, "label": "Attacker Spawn" },
+        "keyPositions": [
+          { "x": 30, "y": 50, "label": "Mid Pillar", "description": "Crucial mid control point." },
+          { "x": 80, "y": 60, "label": "A Shop", "description": "Common entry point for A site." }
+        ],
+        "chokePoints": [
+           { "x": 15, "y": 45, "label": "B Main", "description": "Dangerous choke for B." },
+           { "x": 85, "y": 45, "label": "A Cave", "description": "Main entry for A." },
+           { "x": 50, "y": 45, "label": "Mid Doors", "description": "Heavy contest area." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 85 }, { "x": 30, "y": 70 }, { "x": 20, "y": 50 }], "label": "B Push" },
+          { "points": [{ "x": 50, "y": 85 }, { "x": 70, "y": 70 }, { "x": 80, "y": 50 }], "label": "A Push" }
+        ],
+        "utility": [
+           { "x": 20, "y": 40, "type": "Smoke", "agent": "Viper", "description": "Wall slicing B site." },
+           { "x": 80, "y": 40, "type": "Recon", "agent": "Sova", "description": "Recon bolt for back of A site." }
+        ],
+        "tips": ["Take Mid control.", "Watch out for Operator angles."] 
       },
       "Defence": { 
-        "summary": "Hold long angles. Use Viper wall to deny info.", 
-        "tips": ["Play for retake if they rush.", "Use Operator on A or B main."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "summary": "Hold long angles. Use Viper wall to deny info.",
+        "spawnPosition": { "x": 50, "y": 15, "label": "Defender Spawn" },
+        "keyPositions": [
+          { "x": 20, "y": 30, "label": "B Back Site", "description": "Safe spot to anchor B." },
+          { "x": 80, "y": 30, "label": "A Bridge", "description": "High ground advantage for A." }
+        ],
+        "chokePoints": [
+           { "x": 15, "y": 45, "label": "B Main", "description": "Dangerous choke for B." },
+           { "x": 85, "y": 45, "label": "A Cave", "description": "Main entry for A." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 15 }, { "x": 30, "y": 25 }], "label": "B Rotate" },
+          { "points": [{ "x": 50, "y": 15 }, { "x": 70, "y": 25 }], "label": "A Rotate" }
+        ],
+        "utility": [
+           { "x": 50, "y": 30, "type": "Smoke", "agent": "Viper", "description": "One-way smoke for Mid." }
+        ],
+        "tips": ["Play for retake if they rush.", "Use Operator on A or B main."] 
       }
     }
   },
   "Corrode": {
     "tiers": {
       "S": [
-        { "agentName": "Viper", "reason": "Toxic screen is vital for the open areas." },
-        { "agentName": "Omen", "reason": "Flexible smokes for the verticality of the map." }
+        { "agentName": "Viper", "reason": "Toxic screen is vital for the open areas and verticality." },
+        { "agentName": "Omen", "reason": "Flexible smokes and teleports for the verticality of the map." },
+        { "agentName": "Raze", "reason": "Satchels allow for quick high ground access and clearing tight corners." }
       ],
       "A": [
-        { "agentName": "Raze", "reason": "Great for clearing the tight corners in the castle area." }
+        { "agentName": "Breach", "reason": "Fault line clears narrow corridors effectively." },
+        { "agentName": "Cypher", "reason": "Trips are hard to spot on the uneven terrain." },
+        { "agentName": "Fade", "reason": "Seize tethers enemies in open kill zones." }
+      ],
+      "B": [
+        { "agentName": "Harbor", "reason": "Good for covering vertical angles, but less flexible than Omen." },
+        { "agentName": "Skye", "reason": "Good for info, but flashes can be dodged on the multi-level terrain." },
+        { "agentName": "Tejo", "reason": "Ballistic guidance helps clear high ground, but situational." }
+      ],
+      "C": [
+        { "agentName": "Brimstone", "reason": "Limited smoke range for the verticality." },
+        { "agentName": "Sage", "reason": "Wall is easily broken from high angles." }
       ]
     },
     "tactics": {
       "Attack": { 
         "summary": "Control the high ground. Use utility to clear corners.", 
-        "tips": ["Watch out for the salt flats.", "Use verticality to your advantage."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+          { "x": 40, "y": 50, "label": "Mid Courtyard", "description": "Central control point." },
+          { "x": 75, "y": 60, "label": "Castle Entrance", "description": "Main entry to the high ground." }
+        ],
+        "chokePoints": [
+           { "x": 30, "y": 55, "label": "Left Arch", "description": "Tight entry point." },
+           { "x": 70, "y": 55, "label": "Right Ramp", "description": "Vertical choke." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 90 }, { "x": 30, "y": 70 }, { "x": 30, "y": 40 }], "label": "Left Flank" },
+          { "points": [{ "x": 50, "y": 90 }, { "x": 70, "y": 70 }, { "x": 70, "y": 40 }], "label": "Right Push" }
+        ],
+        "utility": [
+           { "x": 30, "y": 40, "type": "Flash", "agent": "Omen", "description": "Blind for Mid entry." }
+        ],
+        "tips": ["Watch out for the salt flats.", "Use verticality to your advantage."] 
       },
       "Defence": { 
         "summary": "Hold the high ground. Don't get flanked.", 
-        "tips": ["Use shotguns in tight spaces.", "Retake as a team."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+          { "x": 30, "y": 30, "label": "Tower", "description": "Sniper nest overlooking mid." },
+          { "x": 70, "y": 30, "label": "Balcony", "description": "Defensive angle for site hold." }
+        ],
+        "chokePoints": [
+           { "x": 30, "y": 55, "label": "Left Arch", "description": "Tight entry point." },
+           { "x": 70, "y": 55, "label": "Right Ramp", "description": "Vertical choke." }
+        ],
+        "paths": [
+           { "points": [{ "x": 50, "y": 10 }, { "x": 30, "y": 20 }], "label": "Tower Rotate" }
+        ],
+        "utility": [
+           { "x": 50, "y": 40, "type": "Trap", "agent": "Cypher", "description": "Tripwire for flank watch." }
+        ],
+        "tips": ["Use shotguns in tight spaces.", "Retake as a team."] 
       }
     }
   },
@@ -123,25 +209,65 @@
     "tiers": {
       "S": [
         { "agentName": "Raze", "reason": "Grenades and Satchels are perfect for the tight chokes." },
-        { "agentName": "Sage", "reason": "Wall is great for Mid control." }
+        { "agentName": "Sage", "reason": "Wall is great for Mid control." },
+        { "agentName": "Omen", "reason": "One-ways on A Main and B Main are oppressive." }
+      ],
+      "A": [
+        { "agentName": "Breach", "reason": "Stuns cover entire lanes and sites." },
+        { "agentName": "Skye", "reason": "Flashes and dog are great for clearing close angles." },
+        { "agentName": "Astra", "reason": "Global utility allows for quick support on split pushes." }
+      ],
+      "B": [
+        { "agentName": "Jett", "reason": "Good for entry, but tight spaces limit Operator usage." },
+        { "agentName": "Viper", "reason": "Wall is good, but hard to cover both sites effectively." },
+        { "agentName": "Cypher", "reason": "Trips are good, but Raze nades clear them easily." }
+      ],
+      "C": [
+        { "agentName": "Sova", "reason": "Too many walls and ceilings block recon darts." },
+        { "agentName": "Brimstone", "reason": "Smokes are okay, but lacks the flexibility of Omen/Astra." }
       ]
     },
     "tactics": {
       "Attack": { 
         "summary": "Mid control is essential to split the defenders.", 
-        "tips": ["Don't rush main without utility.", "Take Mid control."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+          { "x": 50, "y": 55, "label": "Mid Market", "description": "Key for splitting B." },
+          { "x": 50, "y": 45, "label": "Mid Mail", "description": "Key for splitting A." }
+        ],
+        "chokePoints": [
+           { "x": 80, "y": 65, "label": "A Main", "description": "Notorious choke point." },
+           { "x": 20, "y": 65, "label": "B Main", "description": "Narrow entry (Garage)." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 90 }, { "x": 50, "y": 60 }], "label": "Mid Push" },
+          { "points": [{ "x": 80, "y": 80 }, { "x": 80, "y": 50 }], "label": "A Main" },
+          { "points": [{ "x": 20, "y": 80 }, { "x": 20, "y": 50 }], "label": "B Main" }
+        ],
+        "utility": [
+           { "x": 50, "y": 50, "type": "Wall", "agent": "Sage", "description": "Wall mid to block vision." }
+        ],
+        "tips": ["Don't rush main without utility.", "Take Mid control."] 
       },
       "Defence": { 
         "summary": "Hold Mid. Stall pushes with utility.", 
-        "tips": ["Don't over-rotate.", "Use utility to delay."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+          { "x": 50, "y": 30, "label": "Mid Vent", "description": "Quick rotate path." },
+          { "x": 80, "y": 30, "label": "A Heaven", "description": "High ground for A." },
+          { "x": 20, "y": 30, "label": "B Heaven", "description": "High ground for B." }
+        ],
+        "chokePoints": [
+           { "x": 80, "y": 65, "label": "A Main", "description": "Notorious choke point." },
+           { "x": 20, "y": 65, "label": "B Main", "description": "Narrow entry (Garage)." }
+        ],
+        "paths": [
+           { "points": [{ "x": 50, "y": 30 }, { "x": 80, "y": 30 }], "label": "Vent to A" }
+        ],
+        "utility": [
+           { "x": 20, "y": 40, "type": "Paint", "agent": "Raze", "description": "Nade B main choke." }
+        ],
+        "tips": ["Don't over-rotate.", "Use utility to delay."] 
       }
     }
   },
@@ -149,25 +275,58 @@
     "tiers": {
       "S": [
         { "agentName": "Omen", "reason": "Great for one-ways and flexible smokes." },
-        { "agentName": "Jett", "reason": "Verticality and Operator usage." }
+        { "agentName": "Jett", "reason": "Verticality and Operator usage." },
+        { "agentName": "Sova", "reason": "Recon darts can clear deep angles and bridge areas." }
+      ],
+      "A": [
+        { "agentName": "Breach", "reason": "Fault line knocks enemies off the map." },
+        { "agentName": "KAY/O", "reason": "Zero/point suppresses utility heavy holds." },
+        { "agentName": "Gekko", "reason": "Wingman plants are safe on open sites." }
+      ],
+      "B": [
+        { "agentName": "Harbor", "reason": "Good for cutting off sightlines, but ult is hard to use on spread out sites." },
+        { "agentName": "Raze", "reason": "Satchels are risky near edges, but nade is good." },
+        { "agentName": "Clove", "reason": "Self-revive is strong, but smokes are short duration." }
+      ],
+      "C": [
+        { "agentName": "Brimstone", "reason": "Smokes range is too limited." },
+        { "agentName": "Phoenix", "reason": "Wall is too short for the long lanes." }
       ]
     },
     "tactics": {
       "Attack": { 
         "summary": "Watch your step! Use utility to clear angles.", 
-        "tips": ["Don't fall off the map!", "Control the bridge."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+           { "x": 30, "y": 50, "label": "Bridge", "description": "Dangerous crossing." },
+           { "x": 70, "y": 50, "label": "Platform", "description": "High ground overlook." }
+        ],
+        "chokePoints": [
+           { "x": 30, "y": 55, "label": "Bridge Entry", "description": "Narrow and open." },
+           { "x": 70, "y": 55, "label": "Platform Ramp", "description": "Steep angle." }
+        ],
+        "paths": [
+           { "points": [{ "x": 50, "y": 90 }, { "x": 30, "y": 60 }], "label": "Bridge Path" }
+        ],
+        "utility": [
+           { "x": 30, "y": 45, "type": "Smoke", "agent": "Omen", "description": "Smoke bridge cross." }
+        ],
+        "tips": ["Don't fall off the map!", "Control the bridge."] 
       },
       "Defence": { 
         "summary": "Hold angles. Push for info.", 
-        "tips": ["Use verticality.", "Don't get flanked."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+           { "x": 30, "y": 30, "label": "Sniper Nest", "description": "Long range hold." }
+        ],
+        "chokePoints": [
+           { "x": 30, "y": 55, "label": "Bridge Entry", "description": "Narrow and open." }
+        ],
+        "paths": [
+           { "points": [{ "x": 50, "y": 10 }, { "x": 30, "y": 20 }], "label": "Rotate" }
+        ],
+        "utility": [],
+        "tips": ["Use verticality.", "Don't get flanked."] 
       }
     }
   },
@@ -175,25 +334,64 @@
     "tiers": {
       "S": [
         { "agentName": "Brimstone", "reason": "Smokes and molly are great for execution." },
-        { "agentName": "Raze", "reason": "Grenades for Hookah and Lamps." }
+        { "agentName": "Raze", "reason": "Grenades for Hookah and Lamps." },
+        { "agentName": "Viper", "reason": "Controller/Sentinel hybrid playstyle works well on B site." }
+      ],
+      "A": [
+        { "agentName": "Skye", "reason": "Dog clears Hookah and Lamps safely." },
+        { "agentName": "Sage", "reason": "Wall blocks off Tube or Showers for safe plants." },
+        { "agentName": "Gekko", "reason": "Wingman plant on B site is very strong." }
+      ],
+      "B": [
+        { "agentName": "Cypher", "reason": "Good for B site hold, but Raze/Sova can clear trips easily." },
+        { "agentName": "Astra", "reason": "Good, but Brimstone's instant smokes are often better for executes." },
+        { "agentName": "Fade", "reason": "Prowlers are good for clearing, but Skye dog is slightly better for Hookah." }
+      ],
+      "C": [
+        { "agentName": "Sova", "reason": "No lineups for B site really work well due to roofs." },
+        { "agentName": "Jett", "reason": "No long sightlines for Operator except B Long." }
       ]
     },
     "tactics": {
       "Attack": { 
         "summary": "Use teleporters to rotate quickly.", 
-        "tips": ["Clear Hookah.", "Watch for flanks."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+          { "x": 20, "y": 60, "label": "B Long", "description": "Long range lane." },
+          { "x": 40, "y": 60, "label": "B Hookah", "description": "Close quarters." },
+          { "x": 60, "y": 60, "label": "A Short", "description": "Execution path." },
+          { "x": 80, "y": 60, "label": "A Showers", "description": "Close quarters." }
+        ],
+        "chokePoints": [
+           { "x": 40, "y": 50, "label": "Hookah Exit", "description": "Dangerous jump out." },
+           { "x": 60, "y": 50, "label": "A Lamps Entry", "description": "Heavily contested." },
+           { "x": 80, "y": 50, "label": "Showers Exit", "description": "Tight angle." }
+        ],
+        "paths": [
+          { "points": [{ "x": 50, "y": 90 }, { "x": 20, "y": 70 }], "label": "B Long" },
+          { "points": [{ "x": 50, "y": 90 }, { "x": 60, "y": 70 }], "label": "A Short" }
+        ],
+        "utility": [
+          { "x": 40, "y": 55, "type": "Nade", "agent": "Raze", "description": "Clear Hookah." }
+        ],
+        "tips": ["Clear Hookah.", "Watch for flanks."] 
       },
       "Defence": { 
         "summary": "Hold Hookah and Showers.", 
-        "tips": ["Use teleporters for quick rotates.", "Retake together."],
-        "spawnPosition": null,
-        "keyPositions": [],
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+           { "x": 60, "y": 40, "label": "A Lamps", "description": "Key defensive anchor." },
+           { "x": 30, "y": 40, "label": "B Elbow", "description": "Safe rotate spot." }
+        ],
+        "chokePoints": [
+           { "x": 40, "y": 50, "label": "Hookah Exit", "description": "Dangerous jump out." },
+           { "x": 60, "y": 50, "label": "A Lamps Entry", "description": "Heavily contested." }
+        ],
         "paths": [],
-        "utility": []
+        "utility": [
+           { "x": 60, "y": 50, "type": "Smoke", "agent": "Brimstone", "description": "Smoke A Short." }
+        ],
+        "tips": ["Use teleporters for quick rotates.", "Retake together."] 
       }
     }
   },
@@ -201,25 +399,61 @@
     "tiers": {
       "S": [
         { "agentName": "Breach", "reason": "Stuns and flashes are great for the three sites." },
-        { "agentName": "Jett", "reason": "Operator mobility is key." }
+        { "agentName": "Jett", "reason": "Operator mobility is key." },
+        { "agentName": "Killjoy", "reason": "Turret and alarmbot cover multiple lanes effectively." }
+      ],
+      "A": [
+        { "agentName": "Sova", "reason": "Recon bolt clears corners and garage." },
+        { "agentName": "Omen", "reason": "Blind is huge for taking or retaking sites." },
+        { "agentName": "Phoenix", "reason": "Flash and ult are great for taking Garage." }
+      ],
+      "B": [
+        { "agentName": "Cypher", "reason": "Good for C site hold, but 3 sites makes setups spread thin." },
+        { "agentName": "Astra", "reason": "Can place stars on all 3 sites, but requires good coordination." },
+        { "agentName": "Fade", "reason": "Good for retake, but Sova is slightly better for info here." }
+      ],
+      "C": [
+        { "agentName": "Brimstone", "reason": "Smokes don't recharge; 3 sites drain utility fast." },
+        { "agentName": "Sage", "reason": "Wall is easily broken mid; heal is good but not essential." }
       ]
     },
     "tactics": {
       "Attack": { 
         "summary": "Probing attacks. Rotate to weak site.", 
-        "tips": ["Control Garage.", "Watch for flanks."],
-        "spawnPosition": null,
-        "keyPositions": [],
-        "paths": [],
-        "utility": []
+        "spawnPosition": { "x": 50, "y": 90, "label": "Attacker Spawn" },
+        "keyPositions": [
+           { "x": 20, "y": 50, "label": "C Long", "description": "Sniper lane." },
+           { "x": 50, "y": 50, "label": "Mid Courtyard", "description": "Control for B split." },
+           { "x": 80, "y": 50, "label": "A Long", "description": "Sniper lane." }
+        ],
+        "chokePoints": [
+           { "x": 20, "y": 40, "label": "C Main", "description": "Long range choke." },
+           { "x": 50, "y": 40, "label": "Garage Doors", "description": "Destructible doors." },
+           { "x": 80, "y": 40, "label": "A Long", "description": "Sniper choke." }
+        ],
+        "paths": [
+           { "points": [{ "x": 50, "y": 90 }, { "x": 50, "y": 60 }], "label": "Mid Push" }
+        ],
+        "utility": [
+           { "x": 50, "y": 45, "type": "Flash", "agent": "Breach", "description": "Flash B site entry." }
+        ],
+        "tips": ["Control Garage.", "Watch for flanks."] 
       },
       "Defence": { 
         "summary": "Don't over-rotate. Anchor sites.", 
-        "tips": ["Retake with team.", "Hold Garage."],
-        "spawnPosition": null,
-        "keyPositions": [],
+        "spawnPosition": { "x": 50, "y": 10, "label": "Defender Spawn" },
+        "keyPositions": [
+           { "x": 20, "y": 30, "label": "C Site", "description": "Anchor point." },
+           { "x": 50, "y": 30, "label": "B Site", "description": "Crossfire setup." },
+           { "x": 80, "y": 30, "label": "A Site", "description": "Anchor point." }
+        ],
+        "chokePoints": [
+           { "x": 20, "y": 40, "label": "C Main", "description": "Long range choke." },
+           { "x": 50, "y": 40, "label": "Garage Doors", "description": "Destructible doors." }
+        ],
         "paths": [],
-        "utility": []
+        "utility": [],
+        "tips": ["Retake with team.", "Hold Garage."] 
       }
     }
   }

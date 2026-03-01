@@ -4,7 +4,7 @@ import { useStore } from '../store/useStore';
 import tacticsData from '../data/tactics.json';
 import { MapTactics, TacticPosition, TacticUtility } from '../types';
 import { motion } from 'framer-motion';
-import { Info, MapPin, Zap, Move } from 'lucide-react';
+import { Info, MapPin, Zap, Move, AlertTriangle } from 'lucide-react';
 import { clsx } from 'clsx';
 
 export const TacticalMap: React.FC = () => {
@@ -68,6 +68,18 @@ export const TacticalMap: React.FC = () => {
                     </div>
                   </div>
                 )}
+
+                {/* Choke Points */}
+                {tactics.chokePoints?.map((cp, idx) => (
+                  <div 
+                    key={idx}
+                    className="absolute w-6 h-6 bg-red-600 rounded-full border-2 border-white shadow-lg transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:scale-125 transition-transform flex items-center justify-center animate-pulse"
+                    style={{ left: `${cp.x}%`, top: `${cp.y}%` }}
+                    onClick={() => setSelectedMarker({ type: 'Choke Point', ...cp })}
+                  >
+                     <AlertTriangle size={14} className="text-white" />
+                  </div>
+                ))}
 
                 {/* Key Positions */}
                 {tactics.keyPositions?.map((pos, idx) => (
@@ -172,6 +184,7 @@ export const TacticalMap: React.FC = () => {
                        {selectedMarker.type === 'Utility' && <Zap size={14} />}
                        {selectedMarker.type === 'Position' && <MapPin size={14} />}
                        {selectedMarker.type === 'Spawn' && <Move size={14} />}
+                       {selectedMarker.type === 'Choke Point' && <AlertTriangle size={14} />}
                        {selectedMarker.type}
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1">{selectedMarker.label || selectedMarker.agent}</h3>
