@@ -72,8 +72,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Use Viper wall to slice sites. Control Mid for rotations.", "tips": ["Take Mid control.", "Watch out for Operator angles."] },
-      "Defence": { "summary": "Hold long angles. Use Viper wall to deny info.", "tips": ["Play for retake if they rush.", "Use Operator on A or B main."] }
+      "Attack": { 
+        "summary": "Use Viper wall to slice sites. Control Mid for rotations.", 
+        "tips": ["Take Mid control.", "Watch out for Operator angles."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Hold long angles. Use Viper wall to deny info.", 
+        "tips": ["Play for retake if they rush.", "Use Operator on A or B main."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   },
   "Corrode": {
@@ -87,8 +101,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Control the high ground. Use utility to clear corners.", "tips": ["Watch out for the salt flats.", "Use verticality to your advantage."] },
-      "Defence": { "summary": "Hold the high ground. Don't get flanked.", "tips": ["Use shotguns in tight spaces.", "Retake as a team."] }
+      "Attack": { 
+        "summary": "Control the high ground. Use utility to clear corners.", 
+        "tips": ["Watch out for the salt flats.", "Use verticality to your advantage."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Hold the high ground. Don't get flanked.", 
+        "tips": ["Use shotguns in tight spaces.", "Retake as a team."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   },
   "Split": {
@@ -99,8 +127,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Mid control is essential to split the defenders.", "tips": ["Don't rush main without utility.", "Take Mid control."] },
-      "Defence": { "summary": "Hold Mid. Stall pushes with utility.", "tips": ["Don't over-rotate.", "Use utility to delay."] }
+      "Attack": { 
+        "summary": "Mid control is essential to split the defenders.", 
+        "tips": ["Don't rush main without utility.", "Take Mid control."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Hold Mid. Stall pushes with utility.", 
+        "tips": ["Don't over-rotate.", "Use utility to delay."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   },
   "Abyss": {
@@ -111,8 +153,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Watch your step! Use utility to clear angles.", "tips": ["Don't fall off the map!", "Control the bridge."] },
-      "Defence": { "summary": "Hold angles. Push for info.", "tips": ["Use verticality.", "Don't get flanked."] }
+      "Attack": { 
+        "summary": "Watch your step! Use utility to clear angles.", 
+        "tips": ["Don't fall off the map!", "Control the bridge."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Hold angles. Push for info.", 
+        "tips": ["Use verticality.", "Don't get flanked."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   },
   "Bind": {
@@ -123,8 +179,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Use teleporters to rotate quickly.", "tips": ["Clear Hookah.", "Watch for flanks."] },
-      "Defence": { "summary": "Hold Hookah and Showers.", "tips": ["Use teleporters for quick rotates.", "Retake together."] }
+      "Attack": { 
+        "summary": "Use teleporters to rotate quickly.", 
+        "tips": ["Clear Hookah.", "Watch for flanks."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Hold Hookah and Showers.", 
+        "tips": ["Use teleporters for quick rotates.", "Retake together."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   },
   "Haven": {
@@ -135,8 +205,22 @@
       ]
     },
     "tactics": {
-      "Attack": { "summary": "Probing attacks. Rotate to weak site.", "tips": ["Control Garage.", "Watch for flanks."] },
-      "Defence": { "summary": "Don't over-rotate. Anchor sites.", "tips": ["Retake with team.", "Hold Garage."] }
+      "Attack": { 
+        "summary": "Probing attacks. Rotate to weak site.", 
+        "tips": ["Control Garage.", "Watch for flanks."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      },
+      "Defence": { 
+        "summary": "Don't over-rotate. Anchor sites.", 
+        "tips": ["Retake with team.", "Hold Garage."],
+        "spawnPosition": null,
+        "keyPositions": [],
+        "paths": [],
+        "utility": []
+      }
     }
   }
 }

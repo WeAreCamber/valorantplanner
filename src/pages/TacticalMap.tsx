@@ -70,7 +70,7 @@ export const TacticalMap: React.FC = () => {
                 )}
 
                 {/* Key Positions */}
-                {tactics.keyPositions.map((pos, idx) => (
+                {tactics.keyPositions?.map((pos, idx) => (
                   <div 
                     key={idx}
                     className="absolute w-5 h-5 bg-blue-500 rotate-45 border-2 border-white shadow-lg transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:scale-125 transition-transform"
@@ -82,7 +82,7 @@ export const TacticalMap: React.FC = () => {
                 ))}
 
                 {/* Utility Spots */}
-                {tactics.utility.map((util, idx) => (
+                {tactics.utility?.map((util, idx) => (
                   <div 
                     key={idx}
                     className="absolute w-5 h-5 bg-yellow-500 rounded-sm border-2 border-white shadow-lg transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:scale-125 transition-transform flex items-center justify-center"
@@ -95,7 +95,7 @@ export const TacticalMap: React.FC = () => {
 
                 {/* Paths (SVG Overlay) */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                  {tactics.paths.map((path, idx) => (
+                  {tactics.paths?.map((path, idx) => (
                     <g key={idx}>
                       <polyline
                         points={path.points.map(p => `${p.x}%,${p.y}%`).join(' ')} // Note: SVG points usually need absolute pixels, but percentages might work in some browsers or need conversion. For standard SVG in HTML, points need coords.
@@ -128,7 +128,7 @@ export const TacticalMap: React.FC = () => {
             {/* SVG Container for paths with viewBox 0-100 for easy percentage mapping */}
             {tactics && (
                 <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    {tactics.paths.map((path, idx) => (
+                    {tactics.paths?.map((path, idx) => (
                         <path
                             key={idx}
                             d={`M ${path.points.map(p => `${p.x} ${p.y}`).join(' L ')}`}
@@ -189,7 +189,7 @@ export const TacticalMap: React.FC = () => {
              <div className="space-y-3">
                <h3 className="font-bold text-slate-200 uppercase tracking-wide text-sm">Tactical Tips</h3>
                <ul className="space-y-2">
-                 {tactics.tips.map((tip, idx) => (
+                 {tactics.tips?.map((tip, idx) => (
                    <li key={idx} className="text-sm text-slate-400 flex gap-2 items-start">
                      <span className="text-red-500 mt-1">•</span>
                      <span>{tip}</span>
